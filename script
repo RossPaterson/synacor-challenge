@@ -1,0 +1,99 @@
+# Commands for the game in the Synacor Challenge
+take tablet
+look tablet
+use tablet
+doorway
+north
+north
+bridge
+continue
+down
+east
+take empty lantern
+look empty lantern
+west
+west
+passage
+ladder
+west
+south
+north
+take can
+look can
+use can
+west
+ladder
+use lantern
+darkness
+continue
+west
+west
+west
+west
+north
+take red coin
+look red coin
+north
+east
+take concave coin
+look concave coin
+down
+take corroded coin
+look corroded coin
+up
+west
+west
+take blue coin
+look blue coin
+up
+take shiny coin
+look shiny coin
+down
+east
+use blue coin
+use red coin
+use shiny coin
+use concave coin
+use corroded coin
+north
+take teleporter
+look teleporter
+use teleporter
+take business card
+look business card
+take strange book
+look strange book
+outside
+inside
+use teleporter*
+north
+north
+north
+north
+north
+north
+north
+east
+take journal
+look journal
+west
+north
+north
+take orb
+look orb
+north
+east
+east
+north
+west
+south
+east
+east
+west
+north
+north
+east
+vault
+take mirror
+look mirror
+use mirror

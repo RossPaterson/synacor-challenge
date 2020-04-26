@@ -1,0 +1,8 @@
+*.o
+*.hi
+challenge.bin
+game
+coins
+teleporter
+orb
+output
