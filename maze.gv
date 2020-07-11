@@ -1,0 +1,54 @@
+digraph maze {
+	node [style=filled, fillcolor="#fffacd"]
+
+	# You are in a maze of twisty little passages, all dimly lit by more bioluminescent moss.  There is a ladder here leading up.
+	Ladder [fillcolor="#90ee90"]
+	Ladder -> TMLA [label="north"]
+	Ladder -> MLTA [label="south"]
+	Ladder -> MALT [label="east"]
+	Ladder -> LMTA [label="west"]
+
+	# You are in a little maze of twisty passages, all alike.
+	LMTA -> LMTA [label="north"]
+	LMTA -> TALM [label="south"]
+	LMTA -> Ladder [label="east"]
+
+	# You are in a twisty alike of little passages, all maze.
+	# The east passage appears very dark; you feel likely to be eaten by a Grue.
+	TALM -> MTLA [label="north"]
+	TALM -> TMLA [label="south"]
+	TALM -> MLTA [label="west"]
+	TALM -> Darkness [label="east"]
+
+	# You are in a maze of twisty little passages, all alike.
+	# (code, can)
+	MTLA  [fillcolor="#ffd700"]
+	MTLA -> Ladder [label="west"]
+
+	# You are in a twisty maze of little passages, all alike.
+	TMLA -> MLTA [label="north"]
+	TMLA -> Ladder [label="south"]
+	TMLA -> TMLA [label="west"]
+
+	# You are in a maze of little twisty passages, all alike.
+	MLTA -> Ladder [label="north"]
+	MLTA -> TMLA [label="south"]
+	MLTA -> MLTA [label="east"]
+
+	# You are in a maze of alike little passages, all twisty.
+	# The passage to the east looks very dark; you think you hear a Grue.
+	MALT -> MATL [label="north"]
+	MALT -> MALT [label="south"]
+	MALT -> Ladder [label="west"]
+	MALT -> Darkness [label="east"]
+
+	# You are in a maze of alike twisty passages, all little.
+	MATL -> MLTA [label="north"]
+	MATL -> TMLA [label="east"]
+	MATL -> MATL [label="south"]
+
+	# You are in a twisty maze of little passages, all alike.
+	Darkness [fillcolor="#cccccc"]
+	Darkness -> MLTA [label="north"]
+	Darkness -> TMLA [label="south"]
+}
