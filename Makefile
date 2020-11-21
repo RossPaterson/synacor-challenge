@@ -1,5 +1,5 @@
 PROGS := game coins teleporter orb
-GENERATED := output $(PROGS)
+GENERATED := output $(PROGS) maze.svg
 
 all: $(GENERATED)
 
@@ -20,5 +20,8 @@ challenge.bin:
 %: %.lhs
 	/usr/bin/ghc -Wall --make -O $*.lhs
 	@touch $@
+
+%.svg: %.gv
+	dot -Tsvg $*.gv >$@
 
 game: State.hs Machine.hs
