@@ -54,8 +54,8 @@ possible x:
 > solutions :: (Integer -> Integer -> Integer -> Integer) -> [Integer]
 > solutions h = [x | x <- [1..32767], h x 4 1 == 6]
 
-However, this implementation is far too slow.  There are two approaches
-to speeding it up:
+However, the above implementation of hash is far too slow.
+There are two approaches to speeding it up:
 
 (1) Algebraic transformation
 
@@ -105,6 +105,9 @@ Then for each x we use a list of arrays to cache hash x m n:
 >     cache :: [Array Int Int]
 >     cache = [listArray (0,bound) [hashShape h x' m n | n <- [0..bound]] | m <- [0..]]
 >     bound = 32767
+
+Either of these approaches gives an equivalent implementation of hash
+that is fast enough for the solutions function to call 32767 times:
 
 > main :: IO ()
 > main = putStr $ unlines $ map show (solutions hashA)
